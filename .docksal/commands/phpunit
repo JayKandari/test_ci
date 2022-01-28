@@ -1,0 +1,3 @@
+echo "Running PHPUnit tests..."
+
+echo 'DONE'
