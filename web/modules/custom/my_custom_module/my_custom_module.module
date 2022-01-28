@@ -9,6 +9,9 @@
  * @see https://www.drupal.org/node/2217931
  */
 
+/**
+ * Implements hook_help().
+ */
 function my_custom_module_help() {
-  return array('something');
+  return ['something'];
 }
