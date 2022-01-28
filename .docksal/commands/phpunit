@@ -1,3 +1,7 @@
 echo "Running PHPUnit tests..."
+echo "PWD:"
+pwd
+echo "LS -alh"
+ls -alh
 
 echo 'DONE'
