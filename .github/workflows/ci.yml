@@ -26,9 +26,10 @@ jobs:
           args: phpcs --standard="Drupal,DrupalPractice" -n --extensions="php,module,install,theme" web/modules/custom --ignore=web/themes/*/dist/,web/themes/*/Gulpfile.js,web/themes/*/node_modules/
       - name: Run a one-line script CUSTOOOMM !
         run: echo Hello, world!; ls -alh;
-      - name: Setup Docksal
-        # You may pin to the exact commit or the version.
-        # uses: twfahey1/setup-docksal@03dc8602295aa815e1c40ca7bd82ede48d740938
-        uses: twfahey1/setup-docksal@0.4
+      - name: Install Docksal
+        run: |
+          bash <(curl -fsSL https://get.docksal.io)
+          fin version
+          fin sysinfo
       - name: Run custom command
         run: fin drush status
