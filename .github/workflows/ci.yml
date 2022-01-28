@@ -14,5 +14,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run a one-line script
         run: echo Hello, world!
+      - name: Setup Docksal
+        # You may pin to the exact commit or the version.
+        # uses: twfahey1/setup-docksal@03dc8602295aa815e1c40ca7bd82ede48d740938
+        uses: twfahey1/setup-docksal@0.4
       - name: Run custom command
         run: fin drush status
