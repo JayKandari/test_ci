@@ -24,12 +24,12 @@ jobs:
         uses: docker://hussainweb/drupalqa:php7.4
         with:
           args: phpcs --standard="Drupal,DrupalPractice" -n --extensions="php,module,install,theme" web/modules/custom --ignore=web/themes/*/dist/,web/themes/*/Gulpfile.js,web/themes/*/node_modules/
-      - name: Run a one-line script CUSTOOOMM !
-        run: echo Hello, world!; ls -alh;
       - name: Install Docksal
         run: |
           bash <(curl -fsSL https://get.docksal.io)
           fin version
           fin sysinfo
+      - name: Run a one-line script CUSTOOOMM !
+        run: echo Hello, world!; ls -alh;
       - name: Run custom command
         run: fin drush status
