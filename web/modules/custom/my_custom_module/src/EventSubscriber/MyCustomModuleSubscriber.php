@@ -9,7 +9,7 @@ use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
 /**
- * my custom module event subscriber.
+ * My custom module event subscriber.
  */
 class MyCustomModuleSubscriber implements EventSubscriberInterface {
 
