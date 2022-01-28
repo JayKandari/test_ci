@@ -2,9 +2,7 @@ name: CI
 
 on:
   # @todo: add running build on new commits on PR as well.
-  pull_request:
-    types:
-      - opened
+  pull_request
 
 jobs:
   build:
