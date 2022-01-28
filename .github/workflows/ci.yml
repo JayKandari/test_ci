@@ -1,6 +1,7 @@
 name: CI
 
 on:
+  # @todo: add running build on new commits on PR as well.
   pull_request:
     types:
       - opened
@@ -11,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
+      - name: Run custom command
+        run: fin drush status
