@@ -9,8 +9,22 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Run a one-line script
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          tools: composer:v2
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+      - name: Install composer dependencies
+        run: composer install --prefer-dist --no-progress -vvv
+      - name: Check coding standards for modules and theme
+        uses: docker://hussainweb/drupalqa:php7.4
+        with:
+          args: phpcs --standard="Drupal,DrupalPractice" -n --extensions="php,module,install,theme" web/themes/imalabya web/modules/custom --ignore=web/themes/*/dist/,web/themes/*/Gulpfile.js,web/themes/*/node_modules/
+      - name: Run a one-line script CUSTOOOMM !
         run: echo Hello, world!; ls -alh;
       - name: Setup Docksal
         # You may pin to the exact commit or the version.
