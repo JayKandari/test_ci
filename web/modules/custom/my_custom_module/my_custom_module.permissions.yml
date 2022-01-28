@@ -1,0 +1,4 @@
+administer my_custom_module configuration:
+  title: 'Administer my_custom_module configuration'
+  description: 'Optional description.'
+  restrict access: true

@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for my custom module module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+/**
+ * Implements hook_help().
+ */
+function my_custom_module_help() {
+  // Nice.
+  return ['something'];
+}

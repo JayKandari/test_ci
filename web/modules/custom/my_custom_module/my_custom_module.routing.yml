@@ -1,0 +1,15 @@
+my_custom_module.example:
+  path: '/my-custom-module/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\my_custom_module\Controller\MyCustomModuleController::build'
+  requirements:
+    _permission: 'access content'
+
+my_custom_module.settings_form:
+  path: '/admin/config/system/my-custom-module'
+  defaults:
+    _title: 'my custom module settings'
+    _form: 'Drupal\my_custom_module\Form\SettingsForm'
+  requirements:
+    _permission: 'administer my_custom_module configuration'

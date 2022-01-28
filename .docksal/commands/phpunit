@@ -3,5 +3,4 @@ echo "PWD:"
 pwd
 echo "LS -alh"
 ls -alh
-
-echo 'DONE'
+echo 'DONE... .'
