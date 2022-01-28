@@ -13,5 +13,6 @@
  * Implements hook_help().
  */
 function my_custom_module_help() {
+  // Nice.
   return ['something'];
 }
